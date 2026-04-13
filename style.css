@@ -52,6 +52,12 @@ body{
     }
 } 
 
+@keyframes rainbow{
+    to{
+        background-position: 200% center;
+    }
+}
+
 
 .runner{
     display: flex;
@@ -103,6 +109,11 @@ body{
     flex-direction: column;
     gap: 5em;
 }
+.footerAnimation button:hover{
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff, #ff0000);
+    background-size: 200%;
+    animation: rainbow 4s linear infinite;
+}
 
 .dontClick:hover{
     animation: buttonRun 1s forwards;
@@ -129,5 +140,5 @@ body{
     position: absolute;
     width: 20em;
     height: 19em;
-    animation: flipBlink 80s infinite;
+    animation: flipBlink 80s forwards;
 }
