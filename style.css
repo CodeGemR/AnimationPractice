@@ -69,6 +69,24 @@ body{
     }
 }
 
+@keyframes fader{
+    from{
+         opacity: 0;
+    }    
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes quieres{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 
 .runner{
     display: flex;
@@ -119,6 +137,7 @@ body{
     align-items: center;
     flex-direction: column;
     gap: 5em;
+    margin-top: 10em;
 }
 .footerAnimation button:hover{
     background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff, #ff0000);
@@ -156,12 +175,26 @@ body{
 
 .timbChick{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center ;
-    margin-top: -20em;
+    margin-top: -10em;
     width: 100%;
     animation: spinner 2s linear forwards;
 }
+.timbChick h1{
+    margin-top: -8em;
+    animation: fader 1s linear forwards;
+    animation-delay: 3s;
+    opacity: 0;
+}
 .timbChick img{
     height: 10em;
+    position: absolute;
+}
+
+.chickQuieres{
+    opacity: 0;
+    animation: quieres 0s linear forwards;
+    animation-delay: 3s;
 }
